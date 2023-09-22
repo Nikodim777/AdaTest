@@ -1,7 +1,6 @@
+with Ada.Text_IO;
 procedure Main is
 
 begin
-   --  Insert code here.
-   null;
-   null;
+  Ada.Text_IO.Put_Line ("Hello, world!!");
 end Main;
