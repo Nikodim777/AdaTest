@@ -4,16 +4,27 @@ with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 procedure Main is
   subtype Speed is Integer range 0 .. 1000;
   subtype Time is Integer range 0 .. 100;
-  S : Speed;
-  T : Time;
-  D : constant Integer := 285;
+  The_Speed : Speed;
+  The_Time : Time;
+  Distance : constant Integer := 285;
+  Result : Integer := 0;
 begin
   Put ("Введите скорость в км/ч: ");
-  Get (S);
+  Get (The_Speed);
   Put ("Введите время в часах: ");
-  Get (T);
-  Put ("Проехав заданное время с заданной скоростью вы остановитесь на ");
-  Put (S * T rem D, 3);
-  Put (" километре");
+  Get (The_Time);
+
+  Put ("Проехав заданное время с " &
+         "заданной скоростью вы окажитесь: ");
+  Result := The_Speed * The_Time rem Distance;
+
+  if Result >= 0 and then Result < 100 then
+    Put ("В начале круга");
+  elsif Result < 200 then
+      Put ("В середине круга");
+  else
+      Put ("В конце круга");
+  end if;
+
   New_Line;
 end Main;
