@@ -7,7 +7,7 @@ project Adatest is
    for Exec_Dir use "output";
 
    package Compiler is
-      for Switches ("ada") use ("-gnat2020", "-gnatVa", "-gnatwc.a.b.cdf.f.gh.hj.jk.kl.lm.op.p.q.stu.w.yr.r_r", "-gnatyaAbBcCefhiklL3OprStuxM50");
+      for Switches ("ada") use ("-gnat2020", "-gnatVa", "-gnatwc.a.b.cdf.f.gh.hj.jk.kl.lm.op.p.q.stu.w.yr.r_r", "-gnatyaAbBcCefhiklL3OprStuxM70");
    end Compiler;
 
    package Pretty_Printer is
